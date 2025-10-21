@@ -1,5 +1,5 @@
 // app/about/page.jsx
-import { BookOpen, Quote, Star } from "lucide-react";
+import { BookOpen, Star } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -8,7 +8,13 @@ export default function AboutPage() {
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">
           My Tutoring Philosophy
         </h1>
-
+<div className="max-w-6xl mx-auto px-4">
+  <img
+    src="/philosophy.jpg"
+    alt="Student workspace with books and laptop"
+    className="w-full rounded-2xl shadow-md mb-8"
+  />
+</div>
         <p className="text-lg text-slate-700 leading-relaxed mb-6">
           I believe the best tutoring isn’t about memorizing — it’s about
           mastering *how to think*. My sessions are built on simplicity,
