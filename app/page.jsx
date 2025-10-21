@@ -20,7 +20,7 @@ const NAME = "Matt Bernier";
 const EMAIL = "mattbernier05@gmail.com";
 const PHONE = "(475) 228-5944";
 const CALENDLY = "https://calendly.com/mattbernier05/30min";
-const HEADSHOT = "public/Main headshot pic.jpg"; 
+const HEADSHOT = "/Mainheadshotpic.jpg";
 
 
 export default function Home() {
@@ -88,7 +88,7 @@ function Hero({ name, calendly, headshot }) {
           English • SAT/ACT
         </span>
         <h1 className="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-          Clear, engaging tutoring that builds confidence and results
+          Clear, engaging tutoring that builds confidence and results - v4
         </h1>
         <p className="mt-3 text-slate-600 leading-relaxed">
           I’m a Wake Forest sophomore from Fairfield, CT. I help middle & high
