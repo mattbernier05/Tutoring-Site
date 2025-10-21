@@ -20,7 +20,7 @@ const NAME = "Matt Bernier";
 const EMAIL = "mattbernier05@gmail.com";
 const PHONE = "(475) 228-5944";
 const CALENDLY = "https://calendly.com/mattbernier05/30min";
-const HEADSHOT = "Headshot.jpg"; 
+const HEADSHOT = "public/Main headshot pic.jpg"; 
 
 
 export default function Home() {
@@ -59,7 +59,7 @@ function Header({ name, calendly, email }) {
             href="/about"
             className="text-slate-700 hover:underline text-sm mr-1"
           >
-            About
+            Philosophy
           </a>
           <a
             href={calendly}
