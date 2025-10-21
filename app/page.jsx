@@ -20,7 +20,7 @@ const NAME = "Matt Bernier";
 const EMAIL = "mattbernier05@gmail.com";
 const PHONE = "(475) 228-5944";
 const CALENDLY = "https://calendly.com/mattbernier05/30min";
-const HEADSHOT = "https://placekitten.com/600/600"; // swap in your headshot URL tomorrow
+const HEADSHOT = "Headshot.jpg"; 
 
 
 export default function Home() {
