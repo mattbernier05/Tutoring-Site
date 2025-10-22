@@ -88,11 +88,13 @@ function Hero({ name, calendly, headshot }) {
           English • SAT/ACT
         </span>
         <h1 className="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-          Clear, engaging tutoring that builds confidence and results - v4
+          Clear, engaging tutoring that builds confidence and results 
         </h1>
         <p className="mt-3 text-slate-600 leading-relaxed">
           I’m a Wake Forest sophomore from Fairfield, CT. I help middle & high
-          school students master <strong>Math (Algebra → Precalc)</strong>,{" "}
+          school students master <strong>Math (Algebra → Calculus)</strong>,{" "}
+          
+          
           <strong>English/Writing</strong>, and <strong>SAT/ACT</strong> with
           interactive sessions and quick parent updates after every lesson.
         </p>
@@ -152,7 +154,7 @@ function CredBar() {
         </div>
         <div className="flex items-center gap-3">
           <BookOpen className="text-sky-600" size={18} />
-          <span>Weekly parent updates</span>
+          <span>Constant parent communication</span>
         </div>
       </div>
     </section>
@@ -162,12 +164,12 @@ function CredBar() {
 function Services() {
   const data = [
     {
-      title: "Math (Algebra → Precalc)",
+      title: "Math (Algebra → Calculus)",
       items: [
         "Algebra I/II",
         "Geometry",
-        "Precalculus",
-        "Study skills & error logs",
+        "Precalculus/Calculus",
+        "Optimaliaed practice plans",
       ],
     },
     {
@@ -391,23 +393,23 @@ function Testimonials() {
 
 function FAQ() {
   const qas = [
-    {
-      q: "Do you offer a free session?",
-      a: "I offer a free 30-minute consult with a micro-diagnostic. Full sessions are paid so we keep momentum and accountability.",
-    },
-    {
-      q: "How do payments work?",
-      a: "Simple — pay 24h before each session via Venmo/Zelle. 24h reschedule window; <24h is a 50% charge.",
-    },
-    {
-      q: "Do you assign homework?",
-      a: "Yes — 15–25 minutes of targeted practice between sessions. Keeps progress visible and steady.",
-    },
-    {
-      q: "Do you tutor APs?",
-      a: "I cover math through Precalc and test prep for SAT/ACT. Ask about AP Calc availability.",
-    },
-  ];
+  {
+    q: "Do you offer a free session?",
+    a: "I offer a free 30-minute consult with a micro-diagnostic.",
+  },
+  {
+    q: "What are your feelings towards AI?",
+    a: "I think AI is the future — it’s already changing how we learn and work, and it’s a skill everyone should get comfortable with. Used the right way, it can really boost productivity and help us manage time better. That said, I don’t think it should ever replace real thinking or genuine learning. I see it as a tool to help students learn faster and deeper, not something that does the work for them.",
+  },
+  {
+    q: "Do you assign homework?",
+    a: "The amount of homework I give depends on the commitment preferences of the parent and student. I do recommend practice in between sessions though for any client.",
+  },
+  {
+    q: "Do you tutor APs?",
+    a: "I do – I can tutor AP Calculus AB, AP Physics, AP Statistics, and AP English Language.",
+  },
+];
   return (
     <section id="faq" className="max-w-6xl mx-auto px-4 py-10">
       <h2 className="text-2xl font-bold tracking-tight">FAQ</h2>
