@@ -439,7 +439,7 @@ function Accordion({ title, children }) {
     </div>
   );
 }
-
+<section id="about" className="max-w-6xl mx-auto px-4 py-10 bg-slate-50 rounded-2xl shadow-sm"></section>
 function AboutSection({ name, headshot }) {
   return (
     <section id="about" className="max-w-6xl mx-auto px-4 py-10">
