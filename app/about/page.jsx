@@ -15,20 +15,22 @@ export default function AboutPage() {
     className="w-full rounded-2xl shadow-md mb-8"
   />
 </div>
-        <p className="text-lg text-slate-700 leading-relaxed mb-6">
-          I believe the best tutoring isn’t about memorizing — it’s about
-          mastering *how to think*. My sessions are built on simplicity,
-          structure, and confidence. Students shouldn’t feel overwhelmed or
-          judged — they should feel capable and supported.
-        </p>
+        <p>
+  I believe the best tutoring isn’t about memorizing facts — it’s about learning <em>how to think</em>. 
+  My sessions focus on simplicity, structure, and confidence. Students shouldn’t feel overwhelmed or judged — 
+  they should feel capable, supported, and proud of their progress.
+</p>
 
-        <p className="text-lg text-slate-700 leading-relaxed mb-6">
-          Whether it’s Algebra, essay writing, or SAT prep, I focus on
-          real understanding. We break down concepts step-by-step and use quick
-          reflection at the end of each session so students walk away knowing
-          exactly what they improved and what’s next.
-        </p>
+<p className="mt-4">
+  Whether it’s Algebra, essay writing, or SAT prep, I focus on real understanding. 
+  We break down each concept step-by-step, using quick reflection at the end of every session 
+  so students know exactly what they improved and what’s next.
+</p>
 
+<p className="mt-4">
+  My approach blends clear explanation with curiosity — because good tutoring isn’t about giving 
+  the answer, it’s about helping students realize they already have what it takes to find it.
+</p>
         <div className="border-l-4 border-slate-400 pl-4 italic text-slate-600 my-8">
           “Good tutoring isn’t about giving the answer — it’s about showing
           students that they already have what it takes to find it.”
