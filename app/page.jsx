@@ -391,7 +391,7 @@ function Testimonials() {
   );
 }
 
-function FAQ() {
+function FAQ() {  
   const qas = [
   {
     q: "Do you offer a free session?",
@@ -449,7 +449,7 @@ function AboutSection({ name, headshot }) {
           <img
             src={headshot}
             alt="Tutor"
-            className="w-full h-64 object-cover rounded-2xl shadow-sm"
+            className="w-64 h-64 object-cover rounded-full mx-auto shadow-md border-4 border-white"
           />
         </div>
         <div className="md:col-span-3 text-slate-700">
