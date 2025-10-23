@@ -82,16 +82,21 @@ function Header({ name, calendly, email }) {
 function Hero({ name, calendly }) {
   return (
     <section className="relative">
-      {/* Collage background */}
-      <div className="absolute inset-0">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 h-full opacity-95">
-          <img src="/math-hero.jpg" alt="" className="object-cover h-full w-full" />
-          <img src="/reading-hero.jpg" alt="" className="object-cover h-full w-full" />
-          <img src="/math-hero.jpg" alt="" className="object-cover h-full w-full hidden md:block" />
-          <img src="/reading-hero.jpg" alt="" className="object-cover h-full w-full hidden md:block" />
-        </div>
-        <div className="absolute inset-0 bg-slate-900/65" />
-      </div>
+      {/* BACKGROUND IMAGE MOSAIC */}
+<div className="absolute inset-0">
+  {/* 2-cols on mobile, 4-cols on md+; each tile fills the hero height */}
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-[2px] h-full">
+    <img src="/math-hero.jpeg"    alt="Live math tutoring"    className="h-full w-full object-cover" />
+    <img src="/reading-hero.jpeg" alt="Reading/writing review" className="h-full w-full object-cover" />
+    <img src="/math-hero.jpeg"    alt="" className="h-full w-full object-cover hidden md:block" />
+    <img src="/reading-hero.jpeg" alt="" className="h-full w-full object-cover hidden md:block" />
+  </div>
+
+  {/* Subtle overlay so text pops but images remain visible */}
+  <div className="absolute inset-0 bg-slate-900/25" />
+  {/* Gentle top-to-bottom fade to de-emphasize the lower edge */}
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/10" />
+</div>
 
       {/* Foreground content */}
       <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
