@@ -133,7 +133,7 @@ function Hero({ name, calendly, headshot }) {
       <div className="relative">
         <img
           src={headshot}
-          alt="Tutor headshot"
+          alt="Matt Bernier — online math, writing, and SAT/ACT tutor"
           className="w-full h-[380px] object-cover rounded-3xl shadow-md"
         />
       </div>
@@ -440,7 +440,7 @@ function AboutSection({ name, headshot }) {
         <div className="md:col-span-2">
           <img
             src={headshot}
-            alt="Tutor"
+            alt="Matt Bernier, Fairfield CT online tutor"
             className="w-64 h-64 object-cover rounded-full mx-auto shadow-md border-4 border-white"
           />
         </div>
