@@ -79,63 +79,54 @@ function Header({ name, calendly, email }) {
   );
 }
 
-function Hero({ name, calendly, headshot }) {
+function Hero({ name, calendly }) {
   return (
-    <section className="max-w-6xl mx-auto px-4 pt-10 pb-6 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
-          <Sparkles size={14} className="text-yellow-500" /> Online • Math •
-          English • SAT/ACT
-        </span>
-        <h1 className="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-  Online tutoring that builds confidence and results
-</h1>
-
-<p className="mt-3 text-slate-600 leading-relaxed">
-  I’m a Wake Forest sophomore from Fairfield, CT offering{" "}
-  <strong>online Math (Algebra → Calculus)</strong>,{" "}
-  <strong>English/Writing</strong>, and <strong>SAT/ACT prep</strong> for
-  middle and high school students. Clear explanations, targeted practice, and
-  parent communication—so progress is visible each week.
-</p>
-
-<ul className="mt-4 space-y-2 text-slate-700">
-  {[
-    "Free 30-minute consult + mini diagnostic to pinpoint focus areas",
-    "Interactive sessions (not lectures) with strategies that actually stick",
-    "Weekly progress updates for parents • Flexible online scheduling",
-  ].map((t, i) => (
-    <li key={i} className="flex items-start gap-2">
-      <CheckCircle className="text-emerald-500 mt-0.5" size={18} />
-      <span>{t}</span>
-    </li>
-  ))}
-</ul>
-        <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <a
-            href={calendly}
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-slate-900 text-white hover:bg-slate-800 transition shadow"
-          >
-            <Calendar size={18} /> Book your free consult
-          </a>
-          <a
-            href="#faq"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-slate-300 hover:bg-slate-100 transition"
-          >
-            <ShieldCheck size={18} /> What parents ask
-          </a>
+    <section className="relative">
+      {/* Collage background */}
+      <div className="absolute inset-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 h-full opacity-95">
+          <img src="/math-hero.jpg" alt="" className="object-cover h-full w-full" />
+          <img src="/reading-hero.jpg" alt="" className="object-cover h-full w-full" />
+          <img src="/math-hero.jpg" alt="" className="object-cover h-full w-full hidden md:block" />
+          <img src="/reading-hero.jpg" alt="" className="object-cover h-full w-full hidden md:block" />
         </div>
-        <p className="mt-2 text-xs text-slate-500">
-          Launch rates: <strong>$35/hr</strong> Math/English •{" "}
-          <strong>$45/hr</strong> SAT/ACT
-        </p>
+        <div className="absolute inset-0 bg-slate-900/65" />
       </div>
-      <div className="relative">
-        <img
-          src={headshot}
-          alt="Matt Bernier — online math, writing, and SAT/ACT tutor"
-          className="w-full h-[380px] object-cover rounded-3xl shadow-md"
-        />
+
+      {/* Foreground content */}
+      <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+        <div className="text-white">
+          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
+            Online • Math • English • SAT/ACT
+          </span>
+
+          <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">
+            Expert tutoring. <br/> Accountability. <br/> Clear study plans.
+          </h1>
+
+          <p className="mt-4 text-white/90">
+            I teach students how to think clearly, practice strategically, and
+            build confidence—without the “lecture.” Sessions are online, flexible,
+            and tailored to each student’s goals.
+          </p>
+
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href={calendly} className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition">
+              Book Free Consult
+            </a>
+            <a href="#testimonials" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-white/40 hover:bg-white/10 transition">
+              See results
+            </a>
+          </div>
+        </div>
+
+        {/* Testimonial card on dark hero */}
+        <blockquote className="hidden md:block bg-white/10 backdrop-blur rounded-2xl p-5 text-white shadow-lg">
+          <p className="italic">
+            “Practical SAT strategies + accountability. +130 points in two months.”
+          </p>
+          <div className="mt-2 text-xs text-white/80">— Parent of 11th-grader</div>
+        </blockquote>
       </div>
     </section>
   );
