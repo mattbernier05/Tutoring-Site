@@ -443,8 +443,10 @@ function Accordion({ title, children }) {
 function AboutSection({ name, headshot }) {
   return (
     <section id="about" className="max-w-6xl mx-auto px-4 py-10">
-      <h2 className="text-2xl font-bold tracking-tight">About {name}</h2>
-      <div className="mt-5 grid md:grid-cols-5 gap-6 items-center">
+      <h2 className="text-2xl font-bold tracking-tight text-center mb-6">
+  About {name}
+</h2>
+      <div className="mt-5 grid md:grid-cols-5 gap-6 items-center justify-center text-center md:text-left">
         <div className="md:col-span-2">
           <img
             src={headshot}
