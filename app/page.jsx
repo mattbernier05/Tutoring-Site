@@ -455,26 +455,15 @@ function AboutSection({ name, headshot }) {
           />
         </div>
         <div className="md:col-span-3 text-slate-700">
-          <p>
-            I’m a sophomore at Wake Forest University from Fairfield, CT. I’ve
-            mentored younger students and focus on making tough concepts feel
-            simple, with steady accountability and clear communication to
-            parents.
-          </p>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li className="flex items-start gap-2">
-              <ClipboardCheck className="text-emerald-500 mt-0.5" size={18} />
-              Quick diagnostic to target the biggest wins
-            </li>
-            <li className="flex items-start gap-2">
-              <ClipboardCheck className="text-emerald-500 mt-0.5" size={18} />
-              Interactive sessions, not lectures
-            </li>
-            <li className="flex items-start gap-2">
-              <ClipboardCheck className="text-emerald-500 mt-0.5" size={18} />
-              Weekly progress summaries for parents
-            </li>
-          </ul>
+         <p>
+  I’m a sophomore at Wake Forest University from Fairfield, CT, and I started tutoring to make learning feel less stressful and more rewarding. My approach combines clear explanations, structured strategies, and accountability that actually builds confidence — not pressure.
+</p>
+<p className="mt-3">
+  Before each session, I review progress and plan targeted practice so lessons are tailored to each student’s goals. During sessions, I focus on interaction and problem-solving — not lectures — so students stay engaged and actively learn. I keep communication consistent and transparent, with weekly progress updates for parents so everyone stays on track.
+</p>
+<p className="mt-3">
+  My goal is simple: steady improvement, visible confidence, and students who leave each session understanding <em>why</em> something works — not just <em>how</em> to do it.
+</p>
         </div>
       </div>
     </section>
