@@ -88,28 +88,29 @@ function Hero({ name, calendly, headshot }) {
           English • SAT/ACT
         </span>
         <h1 className="mt-4 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-          Clear, engaging tutoring that builds confidence and results 
-        </h1>
-        <p className="mt-3 text-slate-600 leading-relaxed">
-          I’m a Wake Forest sophomore from Fairfield, CT. I help middle & high
-          school students master <strong>Math (Algebra → Calculus)</strong>,{" "}
-          
-          
-          <strong>English/Writing</strong>, and <strong>SAT/ACT</strong> with
-          interactive sessions and quick parent updates after every lesson.
-        </p>
-        <ul className="mt-4 space-y-2 text-slate-700">
-          {[
-            "Free 30-minute consultation + micro-diagnostic",
-            "Judgment-free explanations with targeted practice",
-            "Weekly progress summaries for parents",
-          ].map((t, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <CheckCircle className="text-emerald-500 mt-0.5" size={18} />
-              <span>{t}</span>
-            </li>
-          ))}
-        </ul>
+  Online tutoring that builds confidence and results
+</h1>
+
+<p className="mt-3 text-slate-600 leading-relaxed">
+  I’m a Wake Forest sophomore from Fairfield, CT offering{" "}
+  <strong>online Math (Algebra → Calculus)</strong>,{" "}
+  <strong>English/Writing</strong>, and <strong>SAT/ACT prep</strong> for
+  middle and high school students. Clear explanations, targeted practice, and
+  parent communication—so progress is visible each week.
+</p>
+
+<ul className="mt-4 space-y-2 text-slate-700">
+  {[
+    "Free 30-minute consult + mini diagnostic to pinpoint focus areas",
+    "Interactive sessions (not lectures) with strategies that actually stick",
+    "Weekly progress updates for parents • Flexible online scheduling",
+  ].map((t, i) => (
+    <li key={i} className="flex items-start gap-2">
+      <CheckCircle className="text-emerald-500 mt-0.5" size={18} />
+      <span>{t}</span>
+    </li>
+  ))}
+</ul>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <a
             href={calendly}
