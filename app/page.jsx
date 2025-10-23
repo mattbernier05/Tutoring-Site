@@ -166,46 +166,35 @@ function Services() {
   const data = [
     {
       title: "Math (Algebra → Calculus)",
-      items: [
-        "Algebra I/II",
-        "Geometry",
-        "Precalculus/Calculus",
-        "Optimaliaed practice plans",
-      ],
+      subtitle: "Master core skills and problem-solving with targeted practice.",
+      items: ["Algebra I/II", "Geometry", "Precalculus/Calculus", "Optimized practice plans"],
     },
     {
       title: "English / Writing",
-      items: [
-        "Grammar & style",
-        "Essay planning",
-        "Reading comprehension",
-        "College essays (structure)",
-      ],
+      subtitle: "Stronger essays, grammar, and reading comprehension.",
+      items: ["Grammar & style", "Essay planning", "Reading strategies", "College essays (structure)"],
     },
     {
       title: "SAT / ACT",
-      items: [
-        "Targeted diagnostics",
-        "Timing & strategies",
-        "Official practice review",
-        "Test-day plan",
-      ],
+      subtitle: "Raise scores with timing, strategy, and focused review.",
+      items: ["Targeted diagnostics", "Timing & strategies", "Official practice review", "Test-day plan"],
     },
   ];
+
   return (
     <section id="services" className="max-w-6xl mx-auto px-4 py-10">
       <h2 className="text-2xl font-bold tracking-tight">What I Tutor</h2>
       <div className="mt-5 grid md:grid-cols-3 gap-4">
         {data.map((card, idx) => (
-          <div
-            key={idx}
-            className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm"
-          >
+          <div key={idx} className="p-5 bg-white rounded-2xl border border-slate-200 shadow-sm">
             <h3 className="font-semibold">{card.title}</h3>
+            {card.subtitle && (
+              <p className="mt-1 text-slate-600 text-sm">{card.subtitle}</p>
+            )}
             <ul className="mt-3 space-y-1 text-sm text-slate-700">
               {card.items.map((it, i) => (
                 <li key={i} className="flex gap-2 items-start">
-                  <CheckCircle size={16} className="text-emerald-500 mt-0.5" />{" "}
+                  <CheckCircle size={16} className="text-emerald-500 mt-0.5" />
                   {it}
                 </li>
               ))}
