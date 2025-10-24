@@ -1,88 +1,72 @@
 // app/about/page.jsx
-import { BookOpen, Star } from "lucide-react";
-
-export default function AboutPage() {
+export default function About() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-800">
-      <section className="max-w-5xl mx-auto px-4 py-12">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-6">
-          My Tutoring Philosophy
-        </h1>
-<div className="max-w-6xl mx-auto px-4">
-  <img
-    src="/philosophy.jpg"
-    alt="Student workspace with books and laptop"
-    className="w-full rounded-2xl shadow-md mb-8"
-  />
-</div>
-        <p>
-  I believe the best tutoring isn’t about memorizing facts — it’s about learning <em>how to think</em>. 
-  My sessions focus on simplicity, structure, and confidence. Students shouldn’t feel overwhelmed or judged — 
-  they should feel capable, supported, and proud of their progress.
-</p>
+    <main className="bg-white">
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <div className="grid md:grid-cols-5 gap-6 items-start">
+          {/* LEFT: Text (shows first on mobile) */}
+          <div className="md:col-span-3">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
+              My Tutoring Philosophy
+            </span>
 
-<p className="mt-4">
-  Whether it’s Algebra, essay writing, or SAT prep, I focus on real understanding. 
-  We break down each concept step-by-step, using quick reflection at the end of every session 
-  so students know exactly what they improved and what’s next.
-</p>
+            <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+              Clear thinking. Steady progress. Real confidence.
+            </h1>
 
-<p className="mt-4">
-  My approach blends clear explanation with curiosity — because good tutoring isn’t about giving 
-  the answer, it’s about helping students realize they already have what it takes to find it.
-</p>
-        <div className="border-l-4 border-slate-400 pl-4 italic text-slate-600 my-8">
-          “Good tutoring isn’t about giving the answer — it’s about showing
-          students that they already have what it takes to find it.”
-        </div>
+            <p className="mt-4 text-lg text-slate-700 leading-relaxed">
+              I started tutoring because I saw how many smart students struggled — not from lack of effort,
+              but from unclear teaching and stress. Tutoring isn’t about drilling; it’s about giving students
+              the confidence and structure to actually <em>think</em> clearly.
+            </p>
 
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900 mb-4">
-          What I Focus On
-        </h2>
-        <ul className="space-y-3 text-slate-700">
-          <li className="flex items-start gap-2">
-            <BookOpen className="text-emerald-600 mt-1" size={18} />  
-            Building genuine understanding — not surface-level memorization.
-          </li>
-          <li className="flex items-start gap-2">
-            <BookOpen className="text-emerald-600 mt-1" size={18} />  
-            Developing study systems that last beyond tutoring sessions.
-          </li>
-          <li className="flex items-start gap-2">
-            <BookOpen className="text-emerald-600 mt-1" size={18} />  
-            Encouraging confidence and curiosity — not anxiety.
-          </li>
-        </ul>
+            <p className="mt-4 text-lg text-slate-700 leading-relaxed">
+              I believe the best tutoring isn’t about memorizing facts or chasing grades. It’s about learning
+              how to think, how to stay calm under pressure, and how to recognize your own progress. My sessions
+              are built on clarity, structure, and steady accountability — so students feel capable, not overwhelmed.
+            </p>
 
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900 mt-12 mb-4">
-          Student Feedback
-        </h2>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {[
-            {
-              quote:
-                "He explains concepts clearly and never makes you feel dumb — it’s like studying with an older friend who knows exactly what’s confusing.",
-              who: "10th Grade Algebra Student",
-            },
-            {
-              quote:
-                "We saw results in weeks — not just better grades, but more confidence and independence in his studying.",
-              who: "Parent of 11th Grader",
-            },
-          ].map((t, i) => (
-            <div
-              key={i}
-              className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm"
-            >
-              <div className="flex text-amber-500 mb-2">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} size={16} fill="currentColor" />
-                ))}
-              </div>
-              <p className="text-slate-800 italic">“{t.quote}”</p>
-              <p className="mt-2 text-xs text-slate-500">— {t.who}</p>
-            </div>
-          ))}
+            <p className="mt-4 text-lg text-slate-700 leading-relaxed">
+              Before each session, I plan personalized practice that targets each student’s biggest opportunities for growth.
+              During lessons, we break problems down step-by-step and reflect on what’s improving. I use interactive tools —
+              from digital whiteboards to shared problem-solving — to make every session active and focused. Parents stay in
+              the loop with weekly updates that track confidence as much as performance.
+            </p>
+
+            <h3 className="mt-6 font-semibold text-slate-900">What I focus on</h3>
+            <ul className="mt-2 space-y-2 text-slate-700">
+              <li className="flex gap-2 items-start">
+                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                Building genuine understanding — not surface-level memorization.
+              </li>
+              <li className="flex gap-2 items-start">
+                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                Developing study systems that last beyond tutoring sessions.
+              </li>
+              <li className="flex gap-2 items-start">
+                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                Encouraging confidence and curiosity — not anxiety.
+              </li>
+              <li className="flex gap-2 items-start">
+                <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                Clear communication — so parents always know what’s working.
+              </li>
+            </ul>
+
+            <blockquote className="mt-6 border-l-4 border-slate-300 pl-4 text-slate-700 italic">
+              “Good tutoring isn’t about giving the answer — it’s about helping students realize they already have
+              what it takes to find it.” — Matt Bernier
+            </blockquote>
+          </div>
+
+          {/* RIGHT: Image */}
+          <aside className="md:col-span-2">
+            <img
+              src="/philosophy.jpg"
+              alt="Calm study setup for online tutoring"
+              className="w-full h-[360px] md:h-[520px] object-cover rounded-2xl shadow-md"
+            />
+          </aside>
         </div>
       </section>
     </main>
