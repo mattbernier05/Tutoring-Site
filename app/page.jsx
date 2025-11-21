@@ -79,59 +79,107 @@ function Header({ name, calendly, email }) {
   );
 }
 
-function Hero({ name, calendly }) {
+function Hero({ name, calendly, headshot }) {
   return (
-    <section className="relative">
-      {/* BACKGROUND IMAGE MOSAIC */}
-<div className="absolute inset-0">
-  {/* 2-cols on mobile, 4-cols on md+; each tile fills the hero height */}
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-[2px] h-full">
-    <img src="/math-hero.jpeg"    alt="Live math tutoring"    className="h-full w-full object-cover" />
-    <img src="/reading-hero.jpeg" alt="Reading/writing review" className="h-full w-full object-cover" />
-    <img src="/math-hero.jpeg"    alt="" className="h-full w-full object-cover hidden md:block" />
-    <img src="/reading-hero.jpeg" alt="" className="h-full w-full object-cover hidden md:block" />
-  </div>
+    <section className="relative overflow-hidden bg-slate-900 text-white">
+      {/* Collage background */}
+      <div className="absolute inset-0">
+        {/* Desktop collage: big image on left, two stacked on right */}
+        <div className="hidden md:grid grid-cols-3 h-full gap-1">
+          {/* Big math image – spans 2/3 of the width */}
+          <img
+            src="/math-hero.jpeg"
+            alt="Explaining an SAT math problem"
+            className="col-span-2 h-full w-full object-cover object-top"
+          />
 
-  {/* Subtle overlay so text pops but images remain visible */}
-  <div className="absolute inset-0 bg-slate-900/25" />
-  {/* Gentle top-to-bottom fade to de-emphasize the lower edge */}
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/10" />
-</div>
-
-      {/* Foreground content */}
-      <div className="relative max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
-        <div className="text-white">
-          <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
-            Online • Math • English • SAT/ACT
-          </span>
-
-          <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold leading-tight">
-            Expert tutoring. <br/> Accountability. <br/> Clear study plans.
-          </h1>
-
-          <p className="mt-4 text-white/90">
-            I teach students how to think clearly, practice strategically, and
-            build confidence—without the “lecture.” Sessions are online, flexible,
-            and tailored to each student’s goals.
-          </p>
-
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href={calendly} className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition">
-              Book Free Consult
-            </a>
-            <a href="#testimonials" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-white/40 hover:bg-white/10 transition">
-              See results
-            </a>
+          {/* Two stacked images on the right */}
+          <div className="grid grid-rows-2 gap-1">
+            <img
+              src="/reading-hero.jpeg"
+              alt="Annotating an SAT reading passage"
+              className="h-full w-full object-cover"
+            />
+            <img
+              src="/math-hero.jpeg"
+              alt="Working through practice problems"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 
-        {/* Testimonial card on dark hero */}
-        <blockquote className="hidden md:block bg-white/10 backdrop-blur rounded-2xl p-5 text-white shadow-lg">
-          <p className="italic">
-            “Practical SAT strategies + accountability. +130 points in two months.”
+        {/* Mobile collage: simple 2-image layout */}
+        <div className="grid md:hidden grid-cols-2 h-full gap-1">
+          <img
+            src="/math-hero.jpeg"
+            alt="Explaining an SAT math problem"
+            className="h-full w-full object-cover object-top"
+          />
+          <img
+            src="/reading-hero.jpeg"
+            alt="Annotating an SAT reading passage"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        {/* Dark overlay so text is readable */}
+        <div className="absolute inset-0 bg-slate-900/70" />
+      </div>
+
+      {/* Foreground content */}
+      <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+        <div className="max-w-xl">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-200/80 mb-3">
+            <span className="h-1 w-6 rounded-full bg-emerald-400" />
+            Online • Math • English • SAT/ACT
+          </span>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            Expert tutoring.
+            <br />
+            Accountability.
+            <br />
+            Clear study plans.
+          </h1>
+
+          <p className="mt-4 text-slate-100/85 text-sm sm:text-base leading-relaxed">
+            I teach students how to think clearly, practice strategically, and build
+            confidence—without the “lecture.” Sessions are online, flexible, and tailored
+            to each student’s goals.
           </p>
-          <div className="mt-2 text-xs text-white/80">— Parent of 11th-grader</div>
-        </blockquote>
+
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+            <a
+              href={calendly}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-slate-900 font-medium hover:bg-slate-100 transition shadow"
+            >
+              <Calendar size={18} />
+              Book Free Consult
+            </a>
+            <a
+              href="#results"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl border border-slate-100/70 text-slate-50/95 hover:bg-slate-900/40 transition"
+            >
+              <LineChart size={18} />
+              See results
+            </a>
+          </div>
+
+          <p className="mt-3 text-xs text-slate-200/80 max-w-sm">
+            Launch rates: <strong>$35/hr</strong> Math/English •{" "}
+            <strong>$45/hr</strong> SAT/ACT. Weekly parent updates included.
+          </p>
+        </div>
+
+        {/* Floating testimonial bubble on the right (desktop only) */}
+        <div className="hidden md:block absolute right-8 bottom-10 max-w-sm">
+          <div className="rounded-2xl bg-white/90 text-slate-900 shadow-lg p-4 text-sm">
+            <p className="italic">
+              “Practical SAT strategies + accountability. +130 points in two months.”
+            </p>
+            <p className="mt-2 text-xs text-slate-500">— Parent of 11th-grader</p>
+          </div>
+        </div>
       </div>
     </section>
   );
